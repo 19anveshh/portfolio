@@ -1,0 +1,11 @@
+# Large archives
+*.zip
+video_frames_24fps.zip
+
+# Python local server
+serve.py
+__pycache__/
+
+# OS and temporary files
+.DS_Store
+Thumbs.db

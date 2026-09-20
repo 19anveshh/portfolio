@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anvesh - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Bespoke Preloader -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-drop-wrapper">
+        <h2 class="loader-message">Sorry for late , I'm finally Here</h2>
+      </div>
+      <div class="loader-bar-container">
+        <div id="loaderBar" class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Scrub Progress Indicator -->
+  <div id="progressBar" class="scrub-progress"></div>
+
+  <!-- Scroll Container -->
+  <main class="scroll-container" id="scrollContainer">
+    <div class="sticky-frame">
+      <!-- Background Canvas (Video Frames) -->
+      <canvas id="canvas"></canvas>
+
+      <!-- Vignette Overlay for Depth & High Readability -->
+      <div class="vignette-overlay"></div>
+
+      <!-- Dynamic Ambient Light / Color Layer Matching Video Tone -->
+      <div class="ambient-glow" id="ambientGlow"></div>
+
+      <!-- Portfolio UI Components Layer (Exact match from reference design) -->
+      <div class="portfolio-overlay" id="portfolioOverlay">
+        
+        <!-- Top Header Row with Menu Navigation -->
+        <header class="portfolio-header">
+          <!-- Top Navigation on the Right Side -->
+          <nav class="top-nav" aria-label="Main Navigation">
+            <a href="#about" class="nav-item">About</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#research" class="nav-item">Research</a>
+            <a href="#experience" class="nav-item">Experience</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#contact" class="nav-item">Contact</a>
+          </nav>
+        </header>
+
+        <!-- Center Giant Hero Title with Left-Aligned "Hi I'm" and Split Stroke/Fill -->
+        <div class="hero-center">
+          <div class="hero-intro-wrapper" id="heroIntroWrapper">
+            <span class="hero-greeting">Hi, I'm</span>
+            <h1 class="portfolio-title" id="portfolioTitle">
+              <span class="char solid">A</span><span class="char solid">N</span><span class="char outline">V</span><span class="char outline">E</span><span class="char solid">S</span><span class="char solid">H</span>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Bottom Row in Hero Overlay -->
+        <footer class="portfolio-footer">
+          <div class="creator-name">Software Engineer</div>
+
+          <!-- Bio Hook (Replacing www.proskills.digital) -->
+          <div class="bio-hook" id="bioHook">
+            <p class="bio-text">
+              I’m a 2nd-year Computer Science student at <strong>Malla Reddy Vishwavidyapeeth</strong>, building at the intersection of <strong>software engineering and AI</strong>.
+            </p>
+            <p class="bio-text">
+              My work revolves around <strong>ML systems, RAG pipelines, AI agents, and developer tools</strong> — with a focus on understanding the system, not just the API.
+            </p>
+            <p class="bio-highlight">
+              Curious by default. Technical by nature. Always building something.
+            </p>
+          </div>
+        </footer>
+
+      </div>
+
+
+
+    </div>
+  </main>
+
+  <!-- Bespoke Engineering About Section -->
+  <section class="about-section" id="about">
+    <!-- Ambient Warm Luxury Gradient Backdrop -->
+    <div class="about-ambient-glow"></div>
+    <div class="about-grid-overlay"></div>
+
+    <!-- Content Container -->
+    <div class="about-container">
+      
+      <!-- Eyebrow + Modern Architectural Heading -->
+      <div class="about-header-block">
+        <div class="about-eyebrow">
+          <span class="eyebrow-indicator"></span>
+          <span>ABOUT ME</span>
+        </div>
+        <h2 class="about-heading">
+          Background <span class="heading-champagne">&amp; Story</span>
+        </h2>
+      </div>
+
+      <!-- Two-Column Bespoke Editorial Layout -->
+      <div class="about-grid">
+        
+        <!-- Left Column: Narrative Story + Technical Stack Chips -->
+        <div class="about-narrative-col">
+          <p class="about-paragraph lead">
+            I’m a <strong>2nd-year Computer Science student at Malla Reddy Vishwavidyapeeth</strong> — interested in the part of software you can’t see: the systems, abstractions, and decisions underneath the screen.
+          </p>
+
+          <p class="about-paragraph">
+            I build <strong>RAG systems, AI agents, and ML applications</strong> from the ground up. Chunking pipelines. Embedding models. FAISS indexes. Retrieval chains. FastAPI backends. LangGraph workflows. I like taking an idea that sounds simple — <em>“let’s make an AI that can understand this”</em> — and finding out what it actually takes to make that true.
+          </p>
+
+          <p class="about-paragraph">
+            I spend a lot of time moving between <strong>code, documentation, research, and broken implementations</strong>. Build something. Find the weak point. Understand it. Fix it. Repeat. That loop is probably the closest thing I have to a workflow.
+          </p>
+
+          <!-- Technical Capabilities & Tools -->
+          <div class="tech-capabilities-block">
+            <span class="tech-capabilities-title">CORE TECHNICAL STACK</span>
+            <div class="tech-tags-cloud">
+              <span class="tech-chip">AI Engineering</span>
+              <span class="tech-chip">RAG</span>
+              <span class="tech-chip">Agentic AI</span>
+              <span class="tech-chip">ML Systems</span>
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">React</span>
+              <span class="tech-chip">LangChain</span>
+              <span class="tech-chip">LangGraph</span>
+              <span class="tech-chip">FAISS</span>
+              <span class="tech-chip">SQL</span>
+              <span class="tech-chip">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile Specs & Fast Facts Card -->
+        <aside class="about-meta-col">
+          <div class="meta-card">
+            <div class="meta-card-header">
+              <span class="meta-card-title">PROFILE SPECIFICATIONS</span>
+              <span class="meta-card-status">AVAILABLE</span>
+            </div>
+            
+            <div class="meta-row">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Hyderabad, India</span>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">Degree</span>
+              <span class="meta-value">B.Tech CSE · Malla Reddy Vishwavidyapeeth</span>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">Year</span>
+              <span class="meta-value">2nd Year (2024–2028)</span>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">Focus</span>
+              <span class="meta-value">RAG Pipelines · AI Agents · Systems</span>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">GitHub</span>
+              <a href="https://github.com/19anveshh" target="_blank" rel="noopener noreferrer" class="meta-link-luxury">
+                <span>github.com/19anveshh</span>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/anvesh-maddela-1ab036362/" target="_blank" rel="noopener noreferrer" class="meta-link-luxury">
+                <span>in/anvesh-maddela</span>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">LeetCode</span>
+              <a href="https://leetcode.com/u/19anveshh/" target="_blank" rel="noopener noreferrer" class="meta-link-luxury">
+                <span>leetcode.com/19anveshh</span>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-label">Instagram</span>
+              <a href="https://instagram.com/anveeshhh" target="_blank" rel="noopener noreferrer" class="meta-link-luxury">
+                <span>@anveeshhh</span>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Projects Section (Top 4 Repositories) -->
+  <section class="projects-section" id="projects">
+    <div class="projects-ambient-glow"></div>
+    <div class="projects-grid-overlay"></div>
+
+    <div class="projects-container">
+      
+      <!-- Section Header -->
+      <div class="projects-header-block">
+        <div class="projects-eyebrow">
+          <span class="eyebrow-indicator"></span>
+          <span>SELECTED WORK · REPOSITORIES</span>
+        </div>
+        <div class="projects-header-row">
+          <h2 class="projects-heading">
+            Featured <span class="heading-champagne">Projects</span>
+          </h2>
+          <a href="https://github.com/19anveshh" target="_blank" rel="noopener noreferrer" class="view-github-all">
+            <span>View all on GitHub</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects Grid (Top 4 Repositories) -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: CodeMap -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag">01 // CODE INTELLIGENCE</span>
+            <span class="project-badge">LIVE APP</span>
+          </div>
+
+          <h3 class="project-title">CodeMap</h3>
+          <p class="project-desc">
+            GPS for unfamiliar codebases. Ask questions in plain English and get pointed straight to the relevant code architecture and abstractions.
+          </p>
+
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Streamlit</span>
+            <span class="stack-tag">AST Engine</span>
+            <span class="stack-tag">AI / RAG</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://codemap-ai.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-demo">
+              <span>Live Demo</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/19anveshh/CodeMap" target="_blank" rel="noopener noreferrer" class="btn-github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Repository</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: YouTube RAG Assistant -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag">02 // RAG SYSTEMS</span>
+            <span class="project-badge">LIVE APP</span>
+          </div>
+
+          <h3 class="project-title">YouTube RAG Assistant</h3>
+          <p class="project-desc">
+            Stop watching, start asking. Converts long-form video transcripts into an interactive vector retrieval assistant for direct question-answering.
+          </p>
+
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">RAG</span>
+            <span class="stack-tag">Embeddings</span>
+            <span class="stack-tag">Streamlit</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://youtube-rag-assistant-anu.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-demo">
+              <span>Live Demo</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/19anveshh/youtube-rag-assistant" target="_blank" rel="noopener noreferrer" class="btn-github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Repository</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: YouTube Video Q&A (RAG) -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag">03 // LANGCHAIN & GEMINI</span>
+            <span class="project-badge">LIVE APP</span>
+          </div>
+
+          <h3 class="project-title">YouTube Video Q&amp;A</h3>
+          <p class="project-desc">
+            Grounded video Q&A with Google Gemini and LangChain. Transcript semantic indexing with strict citations directly referenced from spoken content.
+          </p>
+
+          <div class="project-stack">
+            <span class="stack-tag">LangChain</span>
+            <span class="stack-tag">Google Gemini</span>
+            <span class="stack-tag">Vector DB</span>
+            <span class="stack-tag">Python</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://youtube-video-app-ragchat.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-demo">
+              <span>Live Demo</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/19anveshh/youtube-video-qa-rag" target="_blank" rel="noopener noreferrer" class="btn-github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Repository</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Email Spam Classifier -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag">04 // NLP & MACHINE LEARNING</span>
+            <span class="project-badge">LIVE APP</span>
+          </div>
+
+          <h3 class="project-title">Email Spam Classifier</h3>
+          <p class="project-desc">
+            Real-time Machine Learning NLP spam detection system with text tokenization, vectorization pipelines, and clean interactive web deployment.
+          </p>
+
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Scikit-Learn</span>
+            <span class="stack-tag">NLP</span>
+            <span class="stack-tag">Streamlit</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://my-email-spam-classifier.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-demo">
+              <span>Live Demo</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/19anveshh/email-spam-classifier" target="_blank" rel="noopener noreferrer" class="btn-github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Repository</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="research-section" id="research">
+    <div class="research-ambient-glow"></div>
+    <div class="research-grid-overlay"></div>
+
+    <div class="research-container">
+      
+      <!-- Section Header -->
+      <div class="research-header-block">
+        <div class="research-eyebrow">
+          <span class="eyebrow-indicator"></span>
+          <span>RESEARCH · EXPERIMENTS &amp; DEEP DIVES</span>
+        </div>
+        <h2 class="research-heading">
+          Research <span class="heading-champagne">Experiments &amp; Deep Dives</span>
+        </h2>
+        
+        <p class="research-manifesto-intro">
+          I don’t treat every project as a product. Some start as a question.
+        </p>
+
+        <!-- Core Inquiry Questions Cards -->
+        <div class="inquiry-grid">
+          <div class="inquiry-card">
+            <span class="inquiry-q-mark">?</span>
+            <p class="inquiry-text">Why does retrieval fail?</p>
+          </div>
+          <div class="inquiry-card">
+            <span class="inquiry-q-mark">?</span>
+            <p class="inquiry-text">What actually makes a RAG system useful?</p>
+          </div>
+          <div class="inquiry-card">
+            <span class="inquiry-q-mark">?</span>
+            <p class="inquiry-text">Where does an AI pipeline break when you move beyond a notebook?</p>
+          </div>
+        </div>
+
+        <p class="research-manifesto-conclusion">
+          I explore those questions by building the system, measuring what happens, and then digging into the parts that don’t make sense the first time.
+        </p>
+      </div>
+
+      <!-- Deep Dive 001 Card -->
+      <article class="deep-dive-card">
+        <div class="deep-dive-header">
+          <div class="deep-dive-index-wrap">
+            <span class="deep-dive-number">001</span>
+            <span class="deep-dive-badge">DEEP DIVE EXPERIMENT</span>
+          </div>
+          <h3 class="deep-dive-title">Building a RAG System for Indian Standards</h3>
+          <div class="deep-dive-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">FAISS</span>
+            <span class="stack-tag">Sentence Transformers</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">React</span>
+          </div>
+        </div>
+
+        <!-- Technical Specification Matrix -->
+        <div class="spec-matrix">
+          <div class="spec-row">
+            <span class="spec-label">Documents</span>
+            <span class="spec-value highlight">BIS standards</span>
+          </div>
+          <div class="spec-row pipeline-spec-row">
+            <span class="spec-label">Pipeline</span>
+            <div class="pipeline-flow">
+              <span class="flow-step">Ingestion</span>
+              <span class="flow-arrow">→</span>
+              <span class="flow-step">Chunking</span>
+              <span class="flow-arrow">→</span>
+              <span class="flow-step">Embeddings</span>
+              <span class="flow-arrow">→</span>
+              <span class="flow-step">Retrieval</span>
+              <span class="flow-arrow">→</span>
+              <span class="flow-step active-llm">LLM</span>
+            </div>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Interface</span>
+            <span class="spec-value">React + FastAPI</span>
+          </div>
+        </div>
+
+        <!-- Narrative Story -->
+        <div class="deep-dive-narrative">
+          <p>
+            Built a retrieval-augmented generation system that lets users ask questions about <strong>Bureau of Indian Standards documents</strong> in natural language. Instead of sending an entire document to an LLM, the system converts documents into searchable representations, retrieves the most relevant sections, and uses those sections to construct the answer.
+          </p>
+          <p class="narrative-emphasis">
+            The interesting part wasn’t the chatbot.
+          </p>
+          <p>
+            It was understanding everything underneath it — how documents should be split, how embeddings represent meaning, how FAISS searches that space, and how retrieval quality affects the final response.
+          </p>
+        </div>
+
+        <!-- What I Explored (4-Card Grid) -->
+        <div class="explored-block">
+          <h4 class="sub-block-title">WHAT I EXPLORED</h4>
+          <div class="explored-grid">
+            <div class="explored-card">
+              <div class="explored-card-head">
+                <span class="explored-icon">⚡</span>
+                <span class="explored-title">Chunking</span>
+              </div>
+              <p class="explored-desc">How much context should one chunk contain?</p>
+            </div>
+
+            <div class="explored-card">
+              <div class="explored-card-head">
+                <span class="explored-icon">📐</span>
+                <span class="explored-title">Embeddings</span>
+              </div>
+              <p class="explored-desc">How do words become vectors that a machine can compare?</p>
+            </div>
+
+            <div class="explored-card">
+              <div class="explored-card-head">
+                <span class="explored-icon">🔍</span>
+                <span class="explored-title">Retrieval</span>
+              </div>
+              <p class="explored-desc">How do you find the few pieces of a large document that actually matter?</p>
+            </div>
+
+            <div class="explored-card">
+              <div class="explored-card-head">
+                <span class="explored-icon">🧠</span>
+                <span class="explored-title">Generation</span>
+              </div>
+              <p class="explored-desc">How do you make the LLM answer from retrieved evidence instead of guessing?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What I Learned Callout -->
+        <div class="learned-callout">
+          <div class="learned-tag">WHAT I LEARNED</div>
+          <p class="learned-core">
+            A RAG system is not just <strong>“LLM + PDF.”</strong>
+          </p>
+          <p class="learned-body">
+            It is a chain of decisions where a small mistake early in the pipeline can completely change the final answer.
+          </p>
+          <p class="learned-footer">
+            That became the real experiment: understanding the pipeline well enough to know <strong>where the answer came from, why it was retrieved, and what could make it wrong.</strong>
+          </p>
+        </div>
+
+        <!-- Action CTA -->
+        <div class="deep-dive-actions">
+          <a href="https://github.com/19anveshh" target="_blank" rel="noopener noreferrer" class="btn-demo">
+            <span>View the Project</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience-section" id="experience">
+    <div class="experience-ambient-glow"></div>
+    <div class="experience-grid-overlay"></div>
+
+    <div class="experience-container">
+      
+      <!-- Section Header -->
+      <div class="experience-header-block">
+        <div class="experience-eyebrow">
+          <span class="eyebrow-indicator"></span>
+          <span>EXPERIENCE · BUILDING &amp; SHIPPING</span>
+        </div>
+        <h2 class="experience-heading">
+          Experience <span class="heading-champagne">Building &amp; Shipping</span>
+        </h2>
+        <div class="experience-manifesto">
+          <p class="manifesto-lead">Most of my experience so far comes from building.</p>
+          <p class="manifesto-sub">Not shipping hundreds of features. Not collecting framework names.</p>
+          <p class="manifesto-highlight">Taking an idea, opening a terminal, and figuring out how to turn it into something that actually runs.</p>
+        </div>
+      </div>
+
+      <!-- Experience Items Timeline / Stream -->
+      <div class="experience-stream">
+        
+        <!-- Item 1: AI / RAG Projects -->
+        <article class="experience-card">
+          <div class="experience-card-header">
+            <div>
+              <span class="exp-category">ENGINEERING ARCHITECTURE</span>
+              <h3 class="exp-title">AI / RAG Projects</h3>
+            </div>
+            <div class="exp-stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">LangChain</span>
+              <span class="stack-tag">FAISS</span>
+              <span class="stack-tag">HuggingFace</span>
+              <span class="stack-tag">FastAPI</span>
+            </div>
+          </div>
+          <div class="exp-body">
+            <p>
+              Built end-to-end AI applications covering the full retrieval pipeline — from document and transcript ingestion to chunking, embeddings, vector search, retrieval, and LLM responses.
+            </p>
+            <p>
+              Worked with <strong>FAISS</strong>, <strong>Sentence Transformers</strong>, and LangChain-based retrieval workflows, while learning how each layer affects the next.
+            </p>
+          </div>
+        </article>
+
+        <!-- Item 2: CodeMap — YouTube RAG Assistant -->
+        <article class="experience-card">
+          <div class="experience-card-header">
+            <div>
+              <span class="exp-category">KNOWLEDGE RETRIEVAL</span>
+              <h3 class="exp-title">CodeMap — YouTube RAG Assistant</h3>
+            </div>
+            <div class="exp-stack-tags">
+              <span class="stack-tag">Streamlit</span>
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">HuggingFace</span>
+              <span class="stack-tag">FAISS</span>
+              <span class="stack-tag">LLMs</span>
+            </div>
+          </div>
+          <div class="exp-body">
+            <p class="exp-lead-text">
+              Built a system that turns a YouTube video into a searchable knowledge base.
+            </p>
+
+            <!-- 8-Step Interactive Execution Flow -->
+            <div class="pipeline-steps-grid">
+              <div class="pipeline-step"><span class="step-num">01</span><span class="step-label">Paste a video</span></div>
+              <div class="pipeline-step"><span class="step-num">02</span><span class="step-label">Fetch transcript</span></div>
+              <div class="pipeline-step"><span class="step-num">03</span><span class="step-label">Split into chunks</span></div>
+              <div class="pipeline-step"><span class="step-num">04</span><span class="step-label">Embed the chunks</span></div>
+              <div class="pipeline-step"><span class="step-num">05</span><span class="step-label">Store in FAISS</span></div>
+              <div class="pipeline-step"><span class="step-num">06</span><span class="step-label">Ask questions</span></div>
+              <div class="pipeline-step"><span class="step-num">07</span><span class="step-label">Retrieve context</span></div>
+              <div class="pipeline-step"><span class="step-num">08</span><span class="step-label">Generate answer</span></div>
+            </div>
+
+            <p class="exp-summary-quote">
+              What started as a simple chatbot became a practical exercise in understanding how a <strong>real RAG pipeline is assembled end to end</strong>.
+            </p>
+
+            <div class="exp-card-actions">
+              <a href="https://youtube-rag-assistant-anu.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-demo">
+                <span>Live Project</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+              <a href="https://github.com/19anveshh/youtube-rag-assistant" target="_blank" rel="noopener noreferrer" class="btn-github">
+                <span>Repository</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3: BISense — Standards Intelligence -->
+        <article class="experience-card">
+          <div class="experience-card-header">
+            <div>
+              <span class="exp-category">FULL-STACK INTELLIGENCE</span>
+              <h3 class="exp-title">BISense — Standards Intelligence</h3>
+            </div>
+            <div class="exp-stack-tags">
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">FAISS</span>
+              <span class="stack-tag">Sentence Transformers</span>
+            </div>
+          </div>
+          <div class="exp-body">
+            <p>
+              Built a web application for asking natural-language questions over BIS standards and product information.
+            </p>
+            <p>
+              The backend handles retrieval and generation while the frontend turns the pipeline into a usable product rather than a notebook demo.
+            </p>
+            <p>
+              This project pushed me beyond model usage into <strong>API design, retrieval architecture, frontend integration, and product-level thinking</strong>.
+            </p>
+            <div class="exp-card-actions">
+              <a href="https://github.com/19anveshh" target="_blank" rel="noopener noreferrer" class="btn-demo">
+                <span>View Project</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4: What I’m Working Toward (Vision Banner) -->
+        <div class="vision-banner">
+          <div class="vision-banner-top">
+            <span class="vision-eyebrow">FORWARD TRAJECTORY</span>
+            <h3 class="vision-title">What I’m Working Toward</h3>
+          </div>
+
+          <div class="vision-tags-row">
+            <span class="tech-chip">AI Engineering</span>
+            <span class="tech-chip">RAG</span>
+            <span class="tech-chip">Agentic AI</span>
+            <span class="tech-chip">ML Systems</span>
+            <span class="tech-chip">Developer Tools</span>
+          </div>
+
+          <p class="vision-narrative">
+            I’m currently going deeper into <strong>LangGraph, agentic workflows, ML systems, and production-oriented AI engineering</strong>.
+          </p>
+
+          <div class="vision-quote-box">
+            <span class="vision-quote-label">THE GOAL IS SIMPLE</span>
+            <p class="vision-quote-text">
+              “Understand the machinery. Build the system. Then make it useful.”
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bespoke Engineering Skills Section -->
+  <section class="skills-section" id="skills">
+    <div class="skills-ambient-glow"></div>
+    <div class="skills-grid-overlay"></div>
+
+    <div class="skills-container">
+      
+      <!-- Section Header -->
+      <div class="skills-header-block">
+        <div class="skills-eyebrow">
+          <span class="eyebrow-indicator"></span>
+          <span>CAPABILITIES · TOOLKIT</span>
+        </div>
+        <h2 class="skills-heading">Skills</h2>
+        <p class="skills-subheading">Tools, systems, and ideas I work with.</p>
+      </div>
+
+      <!-- Categories Grid (2-Column Spacious Editorial) -->
+      <div class="skills-categories-grid">
+        
+        <!-- Category 1: AI & Machine Learning -->
+        <article class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-cat-index">01 // ML WORKFLOWS</span>
+            <h3 class="skills-cat-title">AI &amp; Machine Learning</h3>
+          </div>
+          <p class="skills-cat-desc">
+            Working with data, models, embeddings, and ML workflows.
+          </p>
+          <div class="skills-toolkit">
+            <span class="toolkit-item">Python</span>
+            <span class="toolkit-item">NumPy</span>
+            <span class="toolkit-item">Pandas</span>
+            <span class="toolkit-item">Scikit-learn</span>
+            <span class="toolkit-item">HuggingFace</span>
+            <span class="toolkit-item">Sentence Transformers</span>
+          </div>
+        </article>
+
+        <!-- Category 2: LLMs & AI Systems -->
+        <article class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-cat-index">02 // RETRIEVAL &amp; AGENTS</span>
+            <h3 class="skills-cat-title">LLMs &amp; AI Systems</h3>
+          </div>
+          <p class="skills-cat-desc">
+            Building retrieval pipelines, semantic search systems, and agent workflows.
+          </p>
+          <div class="skills-toolkit">
+            <span class="toolkit-item">RAG</span>
+            <span class="toolkit-item">LangChain</span>
+            <span class="toolkit-item">LangGraph</span>
+            <span class="toolkit-item">FAISS</span>
+            <span class="toolkit-item">Vector Search</span>
+            <span class="toolkit-item">Embeddings</span>
+            <span class="toolkit-item">AI Agents</span>
+            <span class="toolkit-item">Prompt Engineering</span>
+          </div>
+        </article>
+
+        <!-- Category 3: Backend & APIs -->
+        <article class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-cat-index">03 // ARCHITECTURE</span>
+            <h3 class="skills-cat-title">Backend &amp; APIs</h3>
+          </div>
+          <p class="skills-cat-desc">
+            Connecting AI systems to reliable, usable application backends.
+          </p>
+          <div class="skills-toolkit">
+            <span class="toolkit-item">FastAPI</span>
+            <span class="toolkit-item">Node.js</span>
+            <span class="toolkit-item">Express.js</span>
+            <span class="toolkit-item">REST APIs</span>
+          </div>
+        </article>
+
+        <!-- Category 4: Frontend -->
+        <article class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-cat-index">04 // INTERFACES</span>
+            <h3 class="skills-cat-title">Frontend</h3>
+          </div>
+          <p class="skills-cat-desc">
+            Building responsive, high-performance interfaces for systems and products.
+          </p>
+          <div class="skills-toolkit">
+            <span class="toolkit-item">React</span>
+            <span class="toolkit-item">JavaScript</span>
+            <span class="toolkit-item">Vite</span>
+            <span class="toolkit-item">HTML</span>
+            <span class="toolkit-item">CSS</span>
+            <span class="toolkit-item">Figma</span>
+          </div>
+        </article>
+
+        <!-- Category 5: Data & Databases -->
+        <article class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-cat-index">05 // PERSISTENCE</span>
+            <h3 class="skills-cat-title">Data &amp; Databases</h3>
+          </div>
+          <p class="skills-cat-desc">
+            Structuring, persisting, and querying state, tabular data, and vector indexes.
+          </p>
+          <div class="skills-toolkit">
+            <span class="toolkit-item">SQL</span>
+            <span class="toolkit-item">SQLite</span>
+            <span class="toolkit-item">PostgreSQL</span>
+          </div>
+        </article>
+
+        <!-- Category 6: Developer Tools -->
+        <article class="skills-card">
+          <div class="skills-card-header">
+            <span class="skills-cat-index">06 // WORKFLOW &amp; RUNTIME</span>
+            <h3 class="skills-cat-title">Developer Tools</h3>
+          </div>
+          <p class="skills-cat-desc">
+            Streamlining development, version control, and containerized runtime environments.
+          </p>
+          <div class="skills-toolkit">
+            <span class="toolkit-item">Git</span>
+            <span class="toolkit-item">GitHub</span>
+            <span class="toolkit-item">Docker</span>
+            <span class="toolkit-item">Jupyter</span>
+            <span class="toolkit-item">VS Code</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Separate Subtle Section: Currently Exploring -->
+      <div class="currently-exploring-panel">
+        <div class="exploring-header">
+          <div class="exploring-pulse-indicator"></div>
+          <div class="exploring-titles">
+            <span class="exploring-eyebrow">ACTIVE INVESTIGATIONS</span>
+            <h3 class="exploring-title">Currently Exploring</h3>
+          </div>
+          <p class="exploring-note">
+            Emerging architectures, agent primitives, and production systems under experiment.
+          </p>
+        </div>
+
+        <div class="exploring-items-wrap">
+          <span class="exploring-chip">Agentic AI</span>
+          <span class="exploring-chip">MCP</span>
+          <span class="exploring-chip">LangGraph</span>
+          <span class="exploring-chip">ML Systems</span>
+          <span class="exploring-chip">Production RAG</span>
+          <span class="exploring-chip">AI Developer Tools</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Site End Footer -->
+  <footer class="site-end-footer" id="contact">
+    <div class="site-end-container">
+      <div class="site-end-brand">
+        <span class="brand-name">ANVESH</span>
+        <span class="brand-dot">·</span>
+        <span class="brand-spec">AI &amp; Systems Engineer</span>
+      </div>
+
+      <!-- Social & Contact Action Buttons (Icons Only) -->
+      <div class="contact-social-bar" aria-label="Social and Contact Profiles">
+        <a href="https://instagram.com/anveeshhh" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram (@anveeshhh)" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/anvesh-maddela-1ab036362/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn (Anvesh Maddela)" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <a href="https://leetcode.com/u/19anveshh/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LeetCode (@19anveshh)" aria-label="LeetCode">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.818 3.662 5.894 5.894 0 0 0 3.343-.39 5.928 5.928 0 0 0 2.378-1.742l1.984-2.247a1.37 1.37 0 0 0-.25-1.928 1.374 1.374 0 0 0-1.933.242l-1.974 2.237a3.19 3.19 0 0 1-1.293.947 3.205 3.205 0 0 1-1.815.213 3.186 3.186 0 0 1-2.593-1.977 3.14 3.14 0 0 1-.188-.553 3.01 3.01 0 0 1-.035-1.29 3.1 3.1 0 0 1 .656-1.144l3.864-4.137 5.41-5.792a1.379 1.379 0 0 0-.248-1.933A1.373 1.373 0 0 0 13.483 0zm-2.88 7.283a1.391 1.391 0 0 0-1.385 1.386 1.39 1.39 0 0 0 1.386 1.385h8.905a1.39 1.39 0 0 0 1.386-1.385 1.39 1.39 0 0 0-1.386-1.386h-8.905z"/>
+          </svg>
+        </a>
+
+        <a href="https://github.com/19anveshh" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub (@19anveshh)" aria-label="GitHub">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <a href="mailto:19anveshh@gmail.com" class="social-btn" title="Email (19anveshh@gmail.com)" aria-label="Email">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <p class="site-end-quote">Understand the machinery · Build the system · Make it useful</p>
+      <a href="#scrollContainer" class="back-to-top">
+        <span>Back to top</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
